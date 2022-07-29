@@ -67,10 +67,40 @@
    document.body.appendChild(mainTag);
 
    const sectionTag = document.createElement('section');
-   mainTag.className = 'center-content';
-   document.body.appendChild(mainTag);
+   sectionTag.className = 'center-content';
+   document.mainTag.appendChild(sectionTag);
 
+   const paragraphTag = document.createElement('p');
+   paragraphTag.innerHTML = 'Algum texto'
+   document.sectionTag.appendChild(paragraphTag);
+   
+   const sectionTag2 = document.createElement('section');
+   sectionTag2.className = 'left-content';
+   document.mainTag.appendChild(sectionTag2);
 
+   const sectionTag3 = document.createElement('section');
+   sectionTag3.className = 'right-content';
+   document.mainTag.appendChild(sectionTag3);
+
+   const ibagem = document.createElement('img');
+   ibagem.className = 'small-image';
+   element.src = 'https://picsum.photos/200';
+   document.sectionTag2.appendChild(ibagem);
+
+   const listaNaoOrdenada = document.createElemenet('ul'); //cria variavel e faz append
+   document.sectionTag3.appendChild(listaNaoOrdenada);
+   const listadenumeros= ['Um','Dois','Tres','Quatro','Cinco','Seis','Sete','Oito','Nove','Dez']//declara var d aray
+    for (let num in listadenumeros) {    //// percorrer array
+        const elementLi = document.createElement('li');  ///// cria var q o array percorrido adicionara para dentro
+        elementLi.innerHTML = listadenumeros[num];   ////adicionando a iteração
+        listaNaoOrdenada.appendChild(listadenumeros); ///// declarando parentesco
+    }
+   
+    for (let i = 0; i <= 3; i +=1) {
+   const element3 = document.createElement('h3');
+   element3.innerHTML = 'Show' + index;
+   mainTag.appendChild(element3);
+   }
     </script>
   </body>
 </html>
